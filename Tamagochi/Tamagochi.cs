@@ -21,7 +21,7 @@ namespace Tamagochi
         //methods
         public void Feed()
         {
-            hunger--;
+            hunger -= 3;
         }
 
         public void Hi()
@@ -32,7 +32,7 @@ namespace Tamagochi
 
         public void Teach(string word)
         {
-
+            words.Add(word);
         }
 
         public void Tick()
@@ -48,19 +48,27 @@ namespace Tamagochi
 
         public void PrintStats()
         {
+            Console.WriteLine(hunger);
+            Console.WriteLine(boredom);
 
+            if (isAlive == false)
+            {
+                Console.WriteLine(name + " is ded :(");
+            }
+            else if (isAlive == true)
+            {
+                Console.WriteLine(name + " is alive! :D");
+            }
         }
 
-        /*public bool GetAlive()
+        public bool GetAlive()
         {
-
-        }*/
+            return isAlive;
+        }
 
         private void ReduceBoredom()
         {
-
+            boredom -= 3;
         }
-
-
     }
 }

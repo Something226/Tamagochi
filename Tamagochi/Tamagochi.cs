@@ -19,6 +19,11 @@ namespace Tamagochi
 
 
         //methods
+        public void Name()
+        {
+
+        }
+
         public void Feed()
         {
             hunger -= 3;
